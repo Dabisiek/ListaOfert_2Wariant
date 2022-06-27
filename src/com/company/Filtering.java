@@ -1,28 +1,34 @@
 package com.company;
 
-import java.util.Comparator;
 
-public class Filtering {
+import java.util.ArrayList;
+import java.util.function.Predicate;
 
-    private final OfferList filtering;
-    private Integer rooms;
-    private final Comparator<Offer> comparator = new Comparator<>() {
+public class Filtering implements Predicate {
+
+    protected final OfferList filtering;
+    private Predicate<OfferList> filtr = new Predicate<>() {
         @Override
-        public int compare(Offer o1, Offer o2) {
-            return Double.compare(o1.getRentalPrice(), o2.getRentalPrice());
+        public Predicate<OfferList> or(Predicate<? super OfferList> other) {
+            return Predicate.super.or(other);
+        }
+
+        @Override
+        public boolean test(OfferList offerList) {
+            return false;
         }
     };
 
-    public Filtering(OfferList filtering, Integer rooms) {
+    public Filtering(OfferList filtering) {
         this.filtering = filtering;
-        this.rooms = rooms;
     }
 
-    public void filtering (){
-        filtering.getOffers().stream()
-                .filter(seeking -> rooms.equals(seeking.getNumbersOfRooms()))
-                .sorted(comparator)
-                .limit(1)
-                .forEach(System.out::println);
+    public static void lowestPrice(OfferList offerList){
+        Offer lowestPrice = offerList.stream().
+    }
+
+    @Override
+    public boolean test(Object o) {
+        return false;
     }
 }
