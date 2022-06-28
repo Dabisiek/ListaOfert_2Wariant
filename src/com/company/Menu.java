@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
@@ -20,7 +19,7 @@ public class Menu {
 
             switch (input.nextInt()) {
                 case 1 -> offerList.showOffers();
-                case 2 -> System.out.println(searching(offerList));
+                case 2 -> searching(offerList);
                 case 3 -> createOffer();
                 case 4 -> {
                     System.out.println("Podaj numer oferty, którą chcesz usunąć");
@@ -69,6 +68,7 @@ public class Menu {
     public void searching(OfferList offerList) {
         System.out.println("Podaj liczbę pokoi, po której chcesz znaleźć najstańszą nieruchomość");
         Integer rooms = input.nextInt();
-        Filtering.lowestPrice(offerList);
+        Filtering filtering = new Filtering(rooms);
+        filtering.filter(offerList);
     }
 }

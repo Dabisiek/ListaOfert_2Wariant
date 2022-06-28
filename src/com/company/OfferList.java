@@ -27,23 +27,6 @@ public class OfferList {
         offers.remove(which);
     }
 
-    //public String search() {
-    //    System.out.println("Podaj liczbę pokoi, dzięki której chcesz znalezc najtańsze mieszkanie");
-    //    Integer howManyRooms = input.nextInt();
-    //    double minPrice = offers.get(0).getRentalPrice();
-    //    int index = 0;
-//
-    //   for (int i = 0; i < offers.size(); i++) {
-    //       if (howManyRooms.equals(offers.get(i).getNumbersOfRooms())) {
-    //           if (minPrice > offers.get(i).getRentalPrice()) {
-    //               minPrice = offers.get(i).getRentalPrice();
-    //                index = i;
-    //           }
-    //       }
-    //    }
-    //    return offers.get(index).toString();
-    //}
-
     public List<Offer> getOffers() {
         return offers;
     }
