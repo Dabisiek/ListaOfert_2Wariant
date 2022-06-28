@@ -15,7 +15,7 @@ public abstract class Offer implements IOffer {
 
     @Override
     public String toString() {
-        return  "Oferta" +
+        return "Oferta" +
                 "localization " + localization + "\n" +
                 "numbersOfRooms " + numbersOfRooms + "\n" +
                 "rentalPrice " + rentalPrice + "\n" +

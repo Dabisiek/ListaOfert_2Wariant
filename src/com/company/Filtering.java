@@ -16,7 +16,7 @@ public class Filtering {
         this.rooms = rooms;
     }
 
-    public void filter(OfferList filtering){
+    public void filter(OfferList filtering) {
         filtering.getOffers().stream()
                 .filter(seeking -> rooms.equals(seeking.getNumbersOfRooms()))
                 .sorted(comparator)

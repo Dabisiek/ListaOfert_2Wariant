@@ -1,6 +1,6 @@
 package com.company;
 
-public class Shed extends Offer{
+public class Shed extends Offer {
 
     private String workingTable;
 
@@ -11,10 +11,10 @@ public class Shed extends Offer{
 
     @Override
     public String toString() {
-        return  "Oferta"+ "\n" +
+        return "Oferta" + "\n" +
                 "lokalizacja " + getLocalization() + "\n" +
                 "Ilość pokoi " + getNumbersOfRooms() + "\n" +
-                "Cena najmu " + getRentalPrice()+"tyś." + "\n" +
+                "Cena najmu " + getRentalPrice() + "tyś." + "\n" +
                 "rodzaj nieruchomości: Szopa" + "\n" +
                 "Czy posiada stół roboczy: " + getWorkingTable() + "\n";
     }

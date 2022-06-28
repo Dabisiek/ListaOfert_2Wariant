@@ -1,6 +1,6 @@
 package com.company;
 
-public class Apartment extends Offer{
+public class Apartment extends Offer {
 
     private String furniture;
 
@@ -11,10 +11,10 @@ public class Apartment extends Offer{
 
     @Override
     public String toString() {
-        return  "Oferta"+ "\n" +
+        return "Oferta" + "\n" +
                 "lokalizacja " + getLocalization() + "\n" +
                 "Ilość pokoi " + getNumbersOfRooms() + "\n" +
-                "Cena najmu " + getRentalPrice()+"tyś." + "\n" +
+                "Cena najmu " + getRentalPrice() + "tyś." + "\n" +
                 "rodzaj nieruchomości: Mieszkanie" + "\n" +
                 "Czy posiada meble: " + getFurniture() + "\n";
     }
